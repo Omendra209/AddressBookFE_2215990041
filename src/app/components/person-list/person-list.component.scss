@@ -1,0 +1,198 @@
+/* Overall Page Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #54bb54, hsl(47, 98%, 51%)); /* Soft green gradient */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Main Container */
+.list-container {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 40px;
+  background: linear-gradient(135deg, #e1eee2, #f0fff0); /* Soft white-green gradient */
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: left; /* Change text-align to left */
+  animation: fadeIn 0.8s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Header and Button Container */
+.header-container {
+  display: flex;
+  justify-content: space-between; /* Ensures space between elements */
+  align-items: center;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+/* Header Styling */
+h2 {
+  margin-bottom: 0;
+  color: #35e13e; /* Deep green */
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #4caf50, #66bb6a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Add Person Button */
+button[routerLink] {
+  background: linear-gradient(90deg, #4caf50, #66f06c);
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+button[routerLink]:hover {
+  background: linear-gradient(90deg, #2e7d32, #4caf50);
+  transform: scale(1.05);
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.8s ease-in-out;
+}
+
+/* Slide Up Animation */
+@keyframes slideUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Table Header & Data Cells */
+th, td {
+  padding: 15px;
+  text-align: left;
+  border-radius: 10px;
+  border: 1px solid #d0e8d0;
+  background: white;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Table Header */
+th {
+  background: linear-gradient(90deg, #4caf50, #2e7d32);
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+/* Row Hover Effect */
+tr:hover {
+  background: #e8f5e9;
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Buttons Styling */
+.edit-btn, .delete-btn {
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Edit Button */
+.edit-btn {
+  background: linear-gradient(90deg, #388e3c, #43a047);
+}
+
+.edit-btn:hover {
+  background: linear-gradient(90deg, #43a047, #388e3c);
+  transform: scale(1.1);
+}
+
+/* Delete Button */
+.delete-btn {
+  background: linear-gradient(90deg, #e53935, #c62828);
+}
+
+.delete-btn:hover {
+  background: linear-gradient(90deg, #c62828, #e53935);
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .list-container {
+      padding: 20px;
+  }
+
+  h2 {
+      font-size: 26px;
+  }
+
+  table {
+      font-size: 14px;
+  }
+
+  button[routerLink], .edit-btn, .delete-btn {
+      width: 100%;
+      margin-top: 10px;
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .list-container {
+      padding: 15px;
+  }
+
+  h2 {
+      font-size: 22px;
+  }
+
+  table {
+      font-size: 12px;
+  }
+
+  th, td {
+      padding: 10px;
+  }
+}

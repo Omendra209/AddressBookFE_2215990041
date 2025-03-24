@@ -1,0 +1,147 @@
+/* Overall Page Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #d4f8d4, #ffffff); /* Soft light green gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Form Container */
+.form-container {
+  width: 420px;
+  margin: 20px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Form Header */
+h2 {
+  color: #2e7d32;
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Form Fields */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Labels */
+label {
+  font-weight: bold;
+  text-align: left;
+  display: block;
+  color: #388e3c;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* Input, Textarea, Select Fields */
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #a5d6a7;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s ease-in-out;
+  background: #f9fff9;
+}
+
+/* Focus Effect */
+input:focus, textarea:focus, select:focus {
+  border-color: #66bb6a;
+  outline: none;
+  box-shadow: 0 0 8px rgba(102, 187, 106, 0.6);
+}
+
+/* Textarea Resizing */
+textarea {
+  height: 90px;
+  resize: vertical;
+}
+
+/* Buttons */
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Submit Button */
+button[type="submit"] {
+  background: linear-gradient(90deg, #4caf50, #2e7d32);
+  color: white;
+  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.2);
+}
+
+/* Disabled Submit Button */
+button[type="submit"]:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Hover Effect */
+button[type="submit"]:hover:not(:disabled) {
+  background: linear-gradient(90deg, #2e7d32, #4caf50);
+  transform: scale(1.05);
+}
+
+/* Cancel Button */
+button[type="button"] {
+  background: linear-gradient(90deg, #e57373, #d32f2f);
+  color: white;
+  margin-top: 5px;
+  box-shadow: 0 4px 10px rgba(211, 47, 47, 0.2);
+}
+
+/* Hover Effect */
+button[type="button"]:hover {
+  background: linear-gradient(90deg, #d32f2f, #e57373);
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .form-container {
+      width: 90%;
+      padding: 20px;
+  }
+
+  h2 {
+      font-size: 22px;
+  }
+
+  input, textarea, select {
+      font-size: 14px;
+  }
+
+  button {
+      font-size: 14px;
+  }
+}
